@@ -7,4 +7,3 @@ for (i=1; i<5; i++){
 }
 soma_nota = soma_nota/4
 alert(soma_nota)
- 
