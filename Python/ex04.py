@@ -1,7 +1,5 @@
-# Crie uma classe Aluno que encapsule os dados de um aluno, como nome e notas, e forneça métodos para manipular essas informações.​Requisitos:​Crie a classe Aluno com atributos privados __nome, __nota1 e __nota2.​Implemente métodos públicos para definir e acessar as notas e o nome.​
-
 class Aluno:
-    def __init__(self, nome: str, nota1:float, nota2:float ):
+    def __init__(self, nome: str, nota1: float, nota2: float ):
         self.__nome = nome
         self.__nota1 = nota1
         self.__nota2 = nota2
@@ -16,10 +14,10 @@ class Aluno:
         print(f"Nota2: {self.__nota2}")
     
     def dizer_media(self):
-        media = self.
-        print (media)
+        print((self.__nota1 + self.__nota2)/2)
 
-aluno = Aluno(nome="Luis", nota1 ="5", nota2 ="7")
+aluno = Aluno(nome="Luis", nota1 =5, nota2 =7)
+
 aluno.dizer_nome()
 aluno.dizer_nota1()
 aluno.dizer_nota2()
