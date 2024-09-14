@@ -27,21 +27,35 @@
         function operacoes(a){
         let caixa1 = parseFloat(document.getElementById("caixa1").value);
         let caixa2 = parseFloat(document.getElementById("caixa2").value);
-        let resultado = 0
+        let resultado = " "
+        let cont = 0
 
         if (a == "soma")
             resultado = caixa1 + caixa2
         if (a == "subtracao")
             resultado = caixa1-caixa2
-        if (a == "multiplicacao")
+        if (a == "multiplicacao") 
             resultado = caixa1 * caixa2
-        if (a == "divisao")
-            resultado = caixa1 / caixa2
-        if (a == "apagar")
+        if (a == "divisao"){
+                if (caixa2 == 0){
+                    cont = 1
+                }
+                else {
+                    resultado = caixa1 / caixa2
+                }
+        }
+        if (a == "apagar") {
             document.getElementById("caixa1").value = " "
             document.getElementById("caixa2").value = " "
-        document.getElementById("caixa3").value = resultado
+            document.getElementById("caixa3").value = " "
         }
+        if(cont == 0){
+            document.getElementById("caixa3").value = resultado
+        }
+        else {
+            document.getElementById("caixa3").value = "não é possivel dividir por zero"
+        }
+    }
     </script>
 
 </body>
