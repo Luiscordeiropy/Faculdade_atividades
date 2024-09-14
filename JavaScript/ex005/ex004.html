@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Calculadora simples</h1>
+        <input id="caixa1" type="number" placeholder="Digite o valor 1"><br>
+        <input id="caixa2" type="number" placeholder="Digite o valor 2"><br>
+        <input id="caixa3" disabled type="text" placeholder="Resultado">
+
+        <div>
+            <button id="soma" onclick="operacoes('soma')">+</button>
+            <button id="subtracao" onclick="operacoes('subtracao')">-</button>
+            <button id="multiplicacao" onclick="operacoes('multiplicacao')">*</button>
+            <button id="divisao" onclick="operacoes('divisao')">/</button>
+            <button id="apagar" onclick="operacoes('apagar')">C</button>
+        </div>
+
+    </header>
+    <script>
+        function operacoes(a){
+        let caixa1 = parseFloat(document.getElementById("caixa1").value);
+        let caixa2 = parseFloat(document.getElementById("caixa2").value);
+        let resultado = 0
+
+        if (a == "soma")
+            resultado = caixa1 + caixa2
+        if (a == "subtracao")
+            resultado = caixa1-caixa2
+        if (a == "multiplicacao")
+            resultado = caixa1 * caixa2
+        if (a == "divisao")
+            resultado = caixa1 / caixa2
+        if (a == "apagar")
+            document.getElementById("caixa1").value = " "
+            document.getElementById("caixa2").value = " "
+        document.getElementById("caixa3").value = resultado
+        }
+    </script>
+
+</body>
+</html>

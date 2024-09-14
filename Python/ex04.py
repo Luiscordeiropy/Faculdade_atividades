@@ -22,3 +22,6 @@ aluno.dizer_nome()
 aluno.dizer_nota1()
 aluno.dizer_nota2()
 aluno.dizer_media()
+
+aluno = Aluno(nome="pdedr", nota1 =5, nota2 =7)
+aluno.dizer_nome()
