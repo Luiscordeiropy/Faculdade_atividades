@@ -1,14 +1,20 @@
 @charset "UTF-8";
 
 header{
+    font-family: Arial, Helvetica, sans-serif;
     position: absolute;
     text-align: center; 
-    background-color: rgb(85, 159, 201);
+    background-color: rgba(85, 158, 201, 0.897);
     padding: 50px;
     border-radius: 5px;
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
+    transition: box-shadow 0.5s ease-in-out;
+}
+header:hover {
+    box-shadow: 1px 1px 9px 2px rgba(0, 0, 0, 0.29);
+    transition: 0.5s;
 }
 
 
