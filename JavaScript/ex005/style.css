@@ -1,10 +1,13 @@
 @charset "UTF-8";
 
+body{
+    background-color: rgba(0, 0, 0, 0.901);
+}
 header{
     font-family: Arial, Helvetica, sans-serif;
     position: absolute;
     text-align: center; 
-    background-color: rgba(85, 158, 201, 0.897);
+    background-color: rgb(118, 128, 159);
     padding: 50px;
     border-radius: 5px;
     left: 50%;
@@ -13,7 +16,7 @@ header{
     transition: box-shadow 0.5s ease-in-out;
 }
 header:hover {
-    box-shadow: 1px 1px 9px 2px rgba(0, 0, 0, 0.29);
+    box-shadow: 1px 1px 9px 2px rgba(255, 255, 255, 0.227);
     transition: 0.5s;
 }
 
@@ -25,6 +28,12 @@ input{
     border-radius: 10px;
     height: 30px;
     width: 270px;
+    transition: 0.2s ease-in-out;
+}
+input:hover {
+    width: 271px;
+    height: 31px;
+    transition: 0.2s;
 }
 #caixa3 {
     text-align: center;
