@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>calculadora</title>
+    <title>Calculadora</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,14 +12,14 @@
         <h1>Calculadora simples</h1>
         <input id="caixa1" type="number" placeholder="Digite o valor 1"><br>
         <input id="caixa2" type="number" placeholder="Digite o valor 2"><br>
-        <input id="caixa3" disabled type="text"  placeholder="Resultado">
+        <input id="caixa3" disabled type="number"  placeholder="Resultado">
 
         <div>
-            <button id="soma" onclick="operacoes('soma')">+</button>
-            <button id="subtracao" onclick="operacoes('subtracao')">-</button>
-            <button id="multiplicacao" onclick="operacoes('multiplicacao')">*</button>
-            <button id="divisao" onclick="operacoes('divisao')">/</button>
-            <button id="apagar" onclick="operacoes('apagar')">C</button>
+            <button onclick="operacoes('+')">+</button>
+            <button onclick="operacoes('-')">-</button>
+            <button onclick="operacoes('*')">*</button>
+            <button onclick="operacoes('/')">/</button>
+            <button onclick="operacoes('c')">C</button>
         </div>
 
     </header>
@@ -30,21 +30,19 @@
         let resultado = " "
         let cont = 0
 
-        if (a == "soma")
+        if (a == "+")
             resultado = caixa1 + caixa2
-        if (a == "subtracao")
+        if (a == "-")
             resultado = caixa1-caixa2
-        if (a == "multiplicacao") 
+        if (a == "*") 
             resultado = caixa1 * caixa2
-        if (a == "divisao"){
-                if (caixa2 == 0){
+        if (a == "/"){
+                if (caixa2 == 0)
                     cont = 1
-                }
-                else {
+                else
                     resultado = caixa1 / caixa2
-                }
         }
-        if (a == "apagar") {
+        if (a == "c") {
             document.getElementById("caixa1").value = " "
             document.getElementById("caixa2").value = " "
             document.getElementById("caixa3").value = " "
@@ -52,11 +50,9 @@
         if(cont == 0){
             document.getElementById("caixa3").value = resultado
         }
-        else {
+        else
             document.getElementById("caixa3").value = "não é possivel dividir por zero"
         }
-    }
     </script>
-
 </body>
 </html>
