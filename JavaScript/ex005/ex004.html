@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <header>
         <h1>Calculadora simples</h1>
         <input id="caixa1" type="number" placeholder="Digite o valor 1"><br>
@@ -32,17 +31,17 @@
 
         if (a == "+")
             resultado = caixa1 + caixa2
-        if (a == "-")
+        else if (a == "-")
             resultado = caixa1-caixa2
-        if (a == "*") 
+        else if (a == "*") 
             resultado = caixa1 * caixa2
-        if (a == "/"){
+        else if (a == "/"){
                 if (caixa2 == 0)
                     cont = 1
                 else
                     resultado = caixa1 / caixa2
-        }
-        if (a == "c") {
+                }
+        else if (a == "c") {
             document.getElementById("caixa1").value = " "
             document.getElementById("caixa2").value = " "
             document.getElementById("caixa3").value = " "
