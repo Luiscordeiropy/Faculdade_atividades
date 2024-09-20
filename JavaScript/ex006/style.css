@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+body {
+    margin: 0;
+}
+
+div {
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    background-color: black;
+    width: 400px;
+    height: 450px;
+    transform: translate(-50% 50%);
+}

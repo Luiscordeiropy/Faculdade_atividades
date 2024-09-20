@@ -30,9 +30,9 @@ input{
     width: 270px;
     transition: 0.2s ease-in-out;
 }
-input:hover {
-    width: 271px;
-    height: 31px;
+#caixa1:hover {
+    width: 275px;
+    height: 35px;
     transition: 0.2s;
 }
 #caixa3 {
