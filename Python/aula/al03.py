@@ -1,7 +1,8 @@
+class MeuErroPersonalizado(Exception):
+    def __init__(self, mensagem):
+        self.mensagem = mensagem
+
 try:
-    resultado = 10 / 0
-    
-except ZeroDivisionError as e:
-    print("Erro: ",e)
-finally:
-    print("Sempre será executado")
+    raise MeuErroPersonalizado("ocorreu um erro personalizado.")
+except MeuErroPersonalizado as e:
+    print("Erro personalizado: ", e.mensagem)
