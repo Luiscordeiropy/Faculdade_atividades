@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadroa</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
     <script src="script.js"> </script>
 </head>
 <body>
-    <div>
+    <div class="fundo">
         <h1>Calculadora</h1>
         <p id="resultado"></p>
         <table>
@@ -34,11 +34,11 @@
                 <td><button onclick="insert('1')">1</button></td>
                 <td><button onclick="insert('2')">2</button></td>
                 <td><button onclick="insert('3')">3</button></td>
-                <td rowspan="2"><button onclick="calcular()">=</button></td>
+                <td rowspan="2"><button onclick="calcular()" id="igual">=</button></td>
             </tr>
             <tr>
-                <td colspan="2"><button onclick="insert('0')">0</button></td>
-                <td><button onclick="insert('.')">.</button></td>
+                <td colspan="2"><button onclick="insert('0')" id="zero">0</button></td>
+                <td><button onclick="insert('.')" id="ponto">.</button></td>
             </tr>
         </table>
     </div>
